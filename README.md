@@ -81,16 +81,27 @@ python visualize.py
 
 ## Sequence Diagram
 
-### Single Test Call (`test_call.py`)
+### Create Agents & Test Call (`create_agents.py`)
 
 ```mermaid
 sequenceDiagram
-    participant Script as test_call.py
+    participant Script as create_agents.py
     participant Vapi as Vapi API
     participant PhoneB as Phone B (Patient)
     participant PhoneA as Phone A (Scheduler)
     participant Results as call_results/
 
+    Note over Script,Vapi: Step 1-2: Create Assistants
+    Script->>Vapi: POST /assistant (Dental Scheduler)
+    Vapi-->>Script: { id: scheduler_id }
+    Script->>Vapi: POST /assistant (Simulated Patient + analysisPlan)
+    Vapi-->>Script: { id: patient_id }
+
+    Note over Script,Vapi: Step 3: Assign Scheduler to Phone A
+    Script->>Vapi: PATCH /phone-number/{phoneA} (assistantId=scheduler)
+    Vapi-->>Script: OK
+
+    Note over Script,Vapi: Step 4: Initiate Call
     Script->>Vapi: POST /call (assistantId=patient, phoneNumberId=B, customer=A)
     Vapi-->>Script: { id: call_id, status: "queued" }
 
@@ -104,6 +115,7 @@ sequenceDiagram
 
     Vapi->>Vapi: Run analysisPlan<br/>• structuredData extraction<br/>• successEvaluation (NumericScale 1-10)<br/>• summary generation
 
+    Note over Script,Vapi: Step 5: Poll & Collect Results
     loop Poll every 5s
         Script->>Vapi: GET /call/{call_id}
         Vapi-->>Script: { status: "in-progress" }
@@ -191,13 +203,14 @@ sequenceDiagram
     participant Visualize as visualize.py
     participant Vapi as Vapi API
 
-    User->>CreateAgents: Setup
-    CreateAgents->>Vapi: POST /assistant (scheduler)
-    CreateAgents->>Vapi: POST /assistant (patient)
-    Vapi-->>CreateAgents: assistant IDs
-    CreateAgents-->>User: Save IDs to .env
+    User->>CreateAgents: Create assistants & run test call
+    CreateAgents->>Vapi: POST /assistant (scheduler + patient)
+    CreateAgents->>Vapi: PATCH /phone-number (assign scheduler)
+    CreateAgents->>Vapi: POST /call → poll → score
+    Vapi-->>CreateAgents: results
+    CreateAgents-->>User: assistant IDs + call_results/{id}/
 
-    User->>TestCall: Smoke test
+    User->>TestCall: Quick re-test (existing assistants)
     TestCall->>Vapi: POST /call → poll → score
     Vapi-->>TestCall: results
     TestCall-->>User: call_results/{id}/ (json + audio + transcript)
