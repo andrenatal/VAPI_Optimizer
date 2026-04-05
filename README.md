@@ -59,7 +59,7 @@ export ANTHROPIC_API_KEY="your-anthropic-key"
 
 # Shared with test_call.py (you already have these)
 export VAPI_PHONE_A_NUMBER="+16282441616"           # scheduler's inbound number
-export VAPI_PHONE_B_ID="f1e1c176-fb1c-4501-b112-c0305c56ada0"  # patient's phone ID
+export VAPI_PHONE_B_ID=""  # patient's phone ID
 
 # From test_call.py output (run it once first)
 export SCHEDULER_ASSISTANT_ID="your-scheduler-assistant-id"
