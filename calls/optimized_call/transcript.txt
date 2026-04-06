@@ -1,0 +1,19 @@
+User: Hello. Thank you for calling Brightsmile Dental Clinic. How can I help you?
+AI: Hi. I'd like to schedule a teeth cleaning appointment. Please. I'm hoping for next
+User: Sure. We have hello. Thank you for calling, uh, Bright Smile. Dental Clinic. Uh, how can I help you?
+AI: Hi. I'd like to schedule a teeth cleaning. Please. You have any availability next Tuesday around 2 PM?
+User: We do have an opening next Tuesday at 2 PM for teeth cleaning. The standard cleaning cost 120 dollars, without insurance. May I have your full name and phone number to book this appointment?
+AI: Before I book, can you give me an exact number how much the cleaning will cost? Also, what if we need to cancel last minute?
+User: The cleaning is 120 dollars. Without insurance. If you have insurance, the co pay is usually between 30 dollars and 50 dollars. For cancellations, we require 20 24
+AI: Could you please tell me
+User: we require a 24 hour notice for cancel we require a 24 hour notice for cancellations.
+AI: okay.
+User: Certainly, the 120 dollars cleaning price is our standard rate. We offer payment plans if needed. Cancellations, we require a 24 hour notice. Less than 24 hours will incur a 50 dollars fee. May I have your full name and phone number to proceed with booking your cleaning appointment next Tuesday at 2 PM.
+AI: Alright. Thank you for explaining that. Before I book, I also have some pain in my back molar. Could someone check that during the cleaning? I'm worried it might need a root canal.
+User: The cleaning appointment can include an exam for your back molar pain. If further treatments like a root canal is needed, will discuss and get your approval first. May I have your full name and phone number to book your cleaning and exam?
+AI: Okay. That helps. My name is Maria Garcia. My phone number is, um, 5 5 5 1 2 3 7 8 9 0.
+User: Thank you, Maria Garcia. To confirm, maria garcia at 5 5 5 1 2 3 7 8 9 0 for a teeth cleaning and exam next Tuesday, at 2 PM. Cleaning is 120 dollars, and any additional treatments will be discussed and approved first. Is this correct?
+AI: Yes. That's correct. Thank you.
+User: Perfect. Your appointment is confirmed. We'll see you then.
+AI: Alright. Thank you. Have a good day.
+User: Thank you. Have a great day. Goodbye.

@@ -1,0 +1,16 @@
+{
+  "call_id": "019d60b3-7091-7222-ae52-8cd9d2349c92",
+  "duration_seconds": 180.211,
+  "duration_pass": false,
+  "vapi_score": "9",
+  "structured_data": {
+    "serviceRequested": "teeth cleaning",
+    "appointmentBooked": false,
+    "schedulerOfferedTimes": false,
+    "schedulerCollectedName": true,
+    "schedulerGreetedProperly": true,
+    "schedulerProvidedPricing": true,
+    "schedulerConfirmedAppointment": false
+  },
+  "final_pass": false
+}

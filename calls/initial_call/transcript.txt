@@ -1,0 +1,16 @@
+User: Hello. How can I help you today?
+AI: Hi. I'd like to schedule a teeth cleaning appointment. I'm hoping to come in next Tuesday at 2 PM. Is that possible?
+User: I'd be happy to help you schedule a teeth cleaning appointment. Could you please provide your name and contact information so Also, may I know if you are an existing patient or or a new patient? Will help me check availability for next Tuesday at 2 PM.
+AI: Sure. My name is Maria Garcia. I'm a new patient. Do you mind telling me how much the cleaning will cost before I book anything? Don't have insurance, so I'm kind of worried about the price.
+User: Thank you, Maria. The cost for a teeth cleaning can vary depending on the dental office. But on average, it typically ranges from 75 dollars to 200 dollars. So for a basic cleaning. I recommend checking with the specific dental office for their exact pricing. If you'd like, I can help you find a dental office that fits your needs and inquire about their rates. For new patients without insurance. Would you like to proceed with that?
+AI: I understand, but can you give me an exact number? I really need to know
+User: I don't I understand
+AI: okay.
+AI: I I really need to
+User: I understand that it looks like your message was cut off.
+AI: oh, okay.
+User: No problem, Maria. If you'd like, I can help help you find a local dental office and provide their exact pricing for a teeth cleaning. Would you like me to do that for you?
+AI: Yes, please. I'd appreciate knowing the exact cost before booking. Also, I've been having some pain in my back molar, Do you know if they'd be able to take a look at that too?
+User: I'm glad to assist you with that. Most dental offices can evaluate tooth pain during your appointment, so they should be able to examine your back. Molar as well to help you find a dental office near you. And get exact pricing for a teeth cleaning and an exam. Could you please provide your city or ZIP code? Will help me find the most convenient options for you.
+AI: I appreciate your help, but I was hoping you could provide information about your specific office since I'm calling you directly. Also, could you let me know what happens if I need to cancel last minute?
+User: Thank you for clarifying, Maria. If you're calling our office directly, can provide you with the following information. The costs for a basic teeth cleaning without thank you, Maria. At our office, a basic teeth cleaning for new patients without insurance costs 120 dollars. During your appointment, the dentist can also examine your back molar to assess any pain you're experiencing. Regarding cancellations, we kindly ask for at least 24 hours notice if you need to cancel or reschedule your appointment. Last minute cancellations or no shows may be subject to a cancellation fee of 50 dollars.

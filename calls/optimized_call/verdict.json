@@ -1,0 +1,29 @@
+{
+  "call_id": "019d60e8-d9fe-7884-9bad-ea7f42b032c8",
+  "checklist": [
+    true,
+    true,
+    true,
+    true,
+    true,
+    true
+  ],
+  "checklist_score": "6/6",
+  "vapi_score": "9",
+  "structured_data": {
+    "appointmentDate": "next Tuesday",
+    "appointmentTime": "2 PM",
+    "serviceRequested": "teeth cleaning appointment",
+    "appointmentBooked": true,
+    "schedulerOfferedTimes": true,
+    "schedulerCollectedName": true,
+    "schedulerGreetedProperly": true,
+    "schedulerProvidedPricing": true,
+    "schedulerConfirmedAppointment": true
+  },
+  "duration_seconds": 158.182,
+  "duration_pass": false,
+  "ended_reason": "customer-ended-call",
+  "cost": 0.2128,
+  "final_pass": false
+}

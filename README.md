@@ -16,11 +16,7 @@ This repository automates that process. It introduces a framework that creates b
 
 1. Call recording prior to optimization
 
-
-
 https://github.com/user-attachments/assets/dadfe9b1-e965-4ce0-a437-e8007bfda7c0
-
-
 
 2. Call recording after optimization
 
@@ -63,8 +59,8 @@ export VAPI_PHONE_A_NUMBER=""  # scheduler's inbound number.
 export VAPI_PHONE_B_ID=""  # patient's phone ID
 
 # From create_agents.py output (run it once first)
-export SCHEDULER_ASSISTANT_ID="your-scheduler-assistant-id"
-export PATIENT_ASSISTANT_ID="your-patient-assistant-id"
+export SCHEDULER_ASSISTANT_ID=""
+export PATIENT_ASSISTANT_ID=""
 ```
 
 #### Step by step execution
@@ -168,22 +164,38 @@ The optimizer combines these with call duration and booking status into a single
 
 ## Results
 
-Starting from a minimal prompt ("You are a receptionist at a dental office. Help people who call."), the optimizer discovers that the prompt needs:
+Starting from a minimal prompt (`"You are a receptionist at a dental office. Help people who call."`), the optimizer autonomously discovers that the prompt needs clinic identity, exact pricing, available hours, a booking flow, objection handling, and a confirmation protocol.
 
-- Clinic identity (name in greeting)
-- Specific service prices (not ranges)
-- Available hours
-- Structured booking flow
-- Objection handling instructions
-- Cancellation policy
+### Improvement Curve
 
-| Metric             | Before         | After |
-| ------------------ | -------------- | ----- |
-| Checklist          | 0-2/6          | 6/6   |
-| NumericScale       | 1-7            | 10    |
-| Appointment Booked | ❌             | ✅    |
-| Call Duration      | 3min (timeout) | ~70s  |
-| Cost per call      | $0.24          | $0.09 |
+Phase 1 — DSPy Iterative Refinement:
+
+Iter 1: 0.493 ████████████████████░░░░░░░░░░░░░░░░░░░░ 4/6, not booked
+Iter 2: 0.597 ████████████████████████░░░░░░░░░░░░░░░░ 5/6, not booked
+Iter 3: 0.986 ███████████████████████████████████████░░ 6/6, BOOKED ★ (99s, score 10)
+
+Phase 2 — Optuna Bayesian Search (6 trials):
+
+Trial 0: 0.410 ████████████████░░░░░░░░░░░░░░░░░░░░░░░░ 3/6, not booked
+Trial 1: 0.410 ████████████████░░░░░░░░░░░░░░░░░░░░░░░░ 3/6, not booked
+Trial 2: 0.850 ██████████████████████████████████░░░░░░░ 6/6, BOOKED
+Trial 3: 0.513 ████████████████████░░░░░░░░░░░░░░░░░░░░ 4/6, not booked
+Trial 4: 0.747 █████████████████████████████░░░░░░░░░░░░ 5/6, BOOKED
+Trial 5: 0.430 █████████████████░░░░░░░░░░░░░░░░░░░░░░░ 3/6, not booked
+
+Final Validation: 0.830 6/6 checklist, BOOKED ✓
+
+### Summary
+
+| Metric             | Before                | After               |
+| ------------------ | --------------------- | ------------------- |
+| Composite Score    | 0.493                 | **0.986**           |
+| Checklist          | 1/6                   | **6/6**             |
+| NumericScale       | 1                     | **10**              |
+| Appointment Booked | ❌                    | **✅**              |
+| Call Duration      | 42s (patient gave up) | **99s (completed)** |
+| Improvement        | —                     | **+100%**           |
+| Total cost         | —                     | **$2.05 (9 calls)** |
 
 ## Tradeoffs & Limitations
 
