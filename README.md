@@ -178,9 +178,10 @@ Starting from a minimal prompt (`"You are a receptionist at a dental office. Hel
 
 | Iteration | Composite | Checklist | Booked | Vapi Score | Duration |
 |---|---|---|---|---|---|
-| 1 (baseline) | 0.493 | 4/6 | ❌ | 8 | 180s (timeout) |
-| 2 | 0.597 | 5/6 | ❌ | 9 | 180s (timeout) |
-| **3** | **0.986** | **6/6** | **✅** | **10** | **99s** ★ |
+| 1 (baseline) | - | 1/6 | ❌ | 1 | 42s (timeout) |
+| 2 | 0.493 | 4/6 | ❌ | 8 | 180s (timeout) |
+| 3| 0.597 | 5/6 | ❌ | 9 | 180s (timeout) |
+| **4** | **0.986** | **6/6** | **✅** | **10** | **99s** ★ |
 
 #### Phase 2 — Optuna Bayesian Search
 
