@@ -8,7 +8,7 @@ Vapi is a developer platform for building voice agents using STT, LLMs, and TTS.
 
 But this raises a fundamental challenge in the LLM era: how do you systematically optimize your agent's prompts? Manual prompt tweaking is brittle, tedious, and empirically driven — a human changes words until they "think" it's good enough, deploys, observes, and repeats. It's rarely data-driven.
 
-This repository automates that process. It introduces a framework that creates baseline agents, evaluates them via real phone calls between an instructed bot and an agent by using structured scoring, applies DSPy-driven prompt optimization and Bayesian search (Optuna TPE) over prompt configurations, and iterates until convergence — replacing human intuition with quantitative feedback loops.
+This repository automates that process. It introduces a framework that creates baseline agents, evaluates them via real phone calls between an instructed bot and an agent by using structured scoring, applies [DSPy](https://dspy.ai/)-driven prompt optimization and Bayesian search (Optuna TPE) over prompt configurations, and iterates until convergence — replacing human intuition with quantitative feedback loops.
 
 ## How It Works
 
