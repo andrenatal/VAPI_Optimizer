@@ -14,11 +14,15 @@ This repository automates that process. It introduces a framework that creates b
 
 ### 0. tl;dr
 
-1. Call recording prior to the optimization
+1. Call recording prior to optimization
 
-<audio controls src="https://raw.githubusercontent.com/andrenatal/Vapi_Optimizer/main/basic_call.wav"></audio>
 
-2. Call recording after the optimization
+
+https://github.com/user-attachments/assets/dadfe9b1-e965-4ce0-a437-e8007bfda7c0
+
+
+
+2. Call recording after optimization
 
 ### 1. Agent Creation & Baseline Evaluation — `create_agents.py`
 
