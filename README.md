@@ -225,6 +225,9 @@ Final Validation: 0.830 6/6 checklist, BOOKED ✓
 
 - **Evaluation relies on Vapi's analysis plan.** The structured data extraction and NumericScale scoring are performed by Vapi's built-in LLM judge. This introduces its own biases — for example, the NumericScale often gave 7-9 to calls where the appointment was never booked. The boolean checklist proved more reliable than the subjective score, which is why it carries 50% of the composite weight.
 
+- **Bot to Bot can be brittle** Limitations on VAD and turn detection algorithms from the STT vendors can make the conversation longer, broken and challenging to converge due to the bot to bot environment. It might require more feature engineering to tune these parameters and make the agents less sensitive and more context-aware.
+
+
 ## Sequence Diagrams
 
 ### Create Agents & Test Call (`create_agents.py`)
