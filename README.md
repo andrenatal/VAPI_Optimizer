@@ -24,7 +24,7 @@ https://github.com/user-attachments/assets/dadfe9b1-e965-4ce0-a437-e8007bfda7c0
 
 https://github.com/user-attachments/assets/4af2f8e7-1ec7-4384-843b-ee337a0def0f
 
-*Disclaimer: Bot-to-bot conversation can affect dialog fluidity due to imperfect turn detection and vad algorithms from STT engines, and is not related to prompt optimization*
+*Disclaimer: Bot-to-bot conversation can have dialog fluidity affected by imperfect turn detection and VAD algorithms in STT engines, and this is not related to prompt optimization.*
 
 ### 1. Agent Creation & Baseline Evaluation — `create_agents.py`
 
