@@ -16,7 +16,7 @@ This repository automates that process. It introduces a framework that creates b
 
 1. Call recording prior to the optimization
 
-<audio controls src="basic_call.wav"></audio>
+<audio controls src="https://raw.githubusercontent.com/andrenatal/Vapi_Optimizer/main/basic_call.wav"></audio>
 
 2. Call recording after the optimization
 
