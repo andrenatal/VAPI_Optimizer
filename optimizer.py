@@ -107,7 +107,7 @@ def run_call_and_score() -> dict:
     log.info(f"  Call started: {call_id}")
 
     # Poll until done
-    time.sleep(5)
+    time.sleep(15)
     start = time.time()
     while time.time() - start < CALL_TIMEOUT:
         r = requests.get(f"{VAPI_BASE}/call/{call_id}", headers=VAPI_HEADERS)
@@ -115,7 +115,7 @@ def run_call_and_score() -> dict:
         call = r.json()
         if call.get("status") == "ended":
             return _extract_scores(call)
-        time.sleep(5)
+        time.sleep(15)
     raise TimeoutError(f"Call {call_id} timed out")
 
 
@@ -406,7 +406,7 @@ class BayesianPromptOptimizer:
         log.info(f"\n  Optuna Trial {trial.number}: {selections}")
 
         update_scheduler(prompt, first_message)
-        time.sleep(2)
+        time.sleep(10)
 
         scores_list = []
         for i in range(CALLS_PER_EVAL):
@@ -497,7 +497,7 @@ def optimize():
         log.info(f"\n--- Iteration {iteration + 1}/{PHASE1_ITERATIONS} ---")
 
         update_scheduler(current_prompt, current_first_message)
-        time.sleep(2)
+        time.sleep(10)
 
         iter_scores = []
         for c in range(CALLS_PER_EVAL):
@@ -588,7 +588,7 @@ def optimize():
     log.info(f"{'=' * 60}")
 
     update_scheduler(best_prompt, best_first_message)
-    time.sleep(2)
+    time.sleep(5)
 
     log.info("  Running final validation call with best prompt...")
     try:

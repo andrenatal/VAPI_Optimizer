@@ -259,7 +259,7 @@ def make_test_call(patient_assistant_id, caller_phone_id, destination_number):
 # Step 5: Poll until call ends, then get results
 # ─────────────────────────────────────────────
 
-def wait_for_call(call_id, poll_interval=5, timeout=300):
+def wait_for_call(call_id, poll_interval=15, timeout=300):
     """Poll GET /call/{id} until the call ends."""
     print(f"\n⏳ Waiting for call {call_id} to complete...")
     start = time.time()

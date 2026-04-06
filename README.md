@@ -155,7 +155,7 @@ Three different models, three different jobs:
 - **gpt-4o** — the simulated patient (strong, fixed, challenging tester)
 - **Claude Sonnet** — the optimizer brain (DSPy analysis, prompt generation, variant creation)
 
-The patient calls the scheduler via Vapi's telephony. Real voice calls are made, transcribed, and scored automatically.
+The bot patient calls the scheduler via Vapi's telephony. Real voice calls are made, transcribed, and scored automatically.
 
 ### Scoring Pipeline
 
